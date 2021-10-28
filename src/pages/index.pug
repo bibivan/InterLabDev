@@ -1,14 +1,19 @@
-extends common/layout
+doctype html
+html(lang="ru")
+    block head
+        head
+            meta(charset="utf-8")
+            title bibione
+            meta(content="width=device-width, initial-scale=1" name="viewport")
+            meta(content="ie=edge" http-equiv="x-ua-compatible")
+            link(rel="stylesheet" href="css/style.min.css")
+    body
+        block header
+            include common/header
+        block content
+            include common/main
 
-block content
-  main.main
-    h2 Title
-    include includes/index/banner
-    hr
-    p paragraph
-    img(src="img/forest.jpg")
-    ul.items
-      li.items__t
-      li.items__t
-      li.items1__t
-    //- и другие блоки
+        block footer
+            include common/footer
+        block scripts
+            script(src="js/main.min.js")

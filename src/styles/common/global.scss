@@ -1,5 +1,3 @@
-@import "../mixins/_fontface";
-
 @import "../../local_modules/normalize.css/normalize";
 
 *,
@@ -10,6 +8,7 @@
 
 html {
     box-sizing: border-box;
+    font-family: ComicSansMS;
 }
 
 body {
@@ -22,4 +21,9 @@ img {
 
 a {
     text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1600px;
 }
