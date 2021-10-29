@@ -145,8 +145,8 @@ node_modules/
 
 # Автоматизируем первую задачу
 Установим плагин [gulp-pug](https://www.npmjs.com/package/gulp-pug) для компиляции наших шаблонов. Выполните в консоли команду: `npm i gulp-pug`
-Создадим файл `pug2html.js` в папке `gulp/tasks`.
-<spoiler title="pug2html.js">
+Создадим файл `htmlInclude.js` в папке `gulp/tasks`.
+<spoiler title="htmlInclude.js">
 ![](https://habrastorage.org/webt/k1/u3/3z/k1u33z0_89gnnzufrt3djtrfcx0.png)
 </spoiler>
 Здесь все понятно: ищем файлы по указанному пути, компилируем и результат выгружаем в папку `build`. Еще добавим [pug-linter](https://www.npmjs.com/package/gulp-pug-linter), чтобы новички не косячили и сохраняли единый стиль написания кода. Для конфигурации создадим файл `.pug-lint.json` в корне проекта. Правила для линтера писал на свой вкус. Вы без проблем сможете изменить. [Список правил.](https://github.com/pugjs/pug-lint/blob/master/docs/rules.md)
@@ -163,7 +163,7 @@ node_modules/
 <spoiler title="Пример работы плагина">
 ![](https://habrastorage.org/webt/rq/7w/yu/rq7wyu9-264hjg8vxoqlxoxaz5o.jpeg)
 </spoiler>
-<spoiler title="Финальный код таски pug2html.js">
+<spoiler title="Финальный код таски htmlInclude.js">
  ![](https://habrastorage.org/webt/nf/co/kw/nfcokwsfdntczlzy9_ngkebv9_g.png)
 </spoiler>
 

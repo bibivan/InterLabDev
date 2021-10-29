@@ -7,9 +7,6 @@ module.exports = {
   root,
   src,
   buildPath: path.join(root, '/build'),
-  pug2html: {
-    beautifyHtml: false
-  },
   lighthouse: {
     reportPath: path.join(root, 'reports'),
     PORT: 8080,

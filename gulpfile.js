@@ -1,7 +1,8 @@
 const gulp = require('gulp')
 const fontsStyle = require('./gulp/tasks/fontsStyle')
 const serve = require('./gulp/tasks/serve')
-const pug2html = require('./gulp/tasks/pug2html')
+const htmlInclude = require('./gulp/tasks/htmlInclude')
+const htmlMinify = require('./gulp/tasks/htmlMinify')
 const styles = require('./gulp/tasks/styles')
 const script = require('./gulp/tasks/script')
 const fonts = require('./gulp/tasks/fonts')
@@ -18,11 +19,10 @@ function setMode(isProduction = false) {
   }
 }
 
-const dev = gulp.series(gulp.parallel(pug2html, fonts, script, imageMinify, svgSprite), fontsStyle, styles)
+const dev = gulp.series(clean, copyDependencies, gulp.parallel(htmlInclude, fonts, script, svgSprite), fontsStyle, styles)
+const build = gulp.series(clean, copyDependencies, gulp.parallel(htmlInclude, htmlMinify, fonts, script, imageMinify), svgSprite, fontsStyle, styles)
 
-const build = gulp.series(clean, copyDependencies, dev)
-
-module.exports.start = gulp.series(setMode(), build, serve)
+module.exports.start = gulp.series(setMode(), dev, serve)
 module.exports.build = gulp.series(setMode(true), build)
 
 module.exports.lighthouse = gulp.series(lighthouse)

@@ -1,10 +1,32 @@
 @import "../mixins/media";
 
+@import "../utils/variables";
+
 header {
-    width: 220px;
-    background-color: red;
+    background-color: $headerColor;
 
     @include media-tablet {
-        width: 500px;
     }
+}
+
+
+.header {
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        display: block;
+        padding: 15px 20px 20px;
+        border: 3px solid $textColor;
+        border-radius: 15px;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: 2px;
+    }
+
 }
