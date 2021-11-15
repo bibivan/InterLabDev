@@ -38,6 +38,8 @@ $(document).ready(() => {
     })
   }
 
+  reviewsSwiper()
+
   $(window).resize(() => {
     reviewsSwiper()
   })
