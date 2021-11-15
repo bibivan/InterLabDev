@@ -12,28 +12,34 @@ $(document).ready(() => {
   // eslint-disable-next-line no-console
   console.log('added focus visible', focusVisible)
 
-  const reviewsSwiper = new Swiper('.reviews__swiper', {
-    slidesPerView: 1,
-    spaceBetween: 32,
-    navigation: {
-      nextEl: '.reviews__next',
-      prevEl: '.reviews__prev',
-    },
-    pagination: {
-      el: '.reviews__pagination',
-      type: 'bullets',
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 24,
-        slidesPerGroup: 2,
+  function reviewsSwiper () {
+    new Swiper('.reviews__swiper', {
+      slidesPerView: 1,
+      spaceBetween: 32,
+      navigation: {
+        nextEl: '.reviews__next',
+        prevEl: '.reviews__prev',
       },
-      1152: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-      }
-    },
+      pagination: {
+        el: '.reviews__pagination',
+        type: 'bullets',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+          slidesPerGroup: 2,
+        },
+        1152: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+        }
+      },
+    })
+  }
+
+  $(window).resize(() => {
+    reviewsSwiper()
   })
 
   const phoneNumber = $('.form-feedback__input--tel')
@@ -91,10 +97,6 @@ $(document).ready(() => {
   $('.nav__item').click(function () {
     $('.burger').removeClass('active')
     $('.header').removeClass('menu-opened')
-  })
-
-  $(window).resize(() => {
-    reviewsSwiper()
   })
 
   $('.faq__title').click(function () {
