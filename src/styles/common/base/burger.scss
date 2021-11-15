@@ -12,6 +12,17 @@
         display: inline-block;
     }
 
+    span {
+        content: '';
+        position: absolute;
+        display: block;
+        right: -63%;
+        top: 50%;
+        width: 64px;
+        height: 64px;
+        transform:  translateY(-50%);
+    }
+
     &::before, &::after {
         content: '';
         position: absolute;
