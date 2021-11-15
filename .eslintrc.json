@@ -12,7 +12,7 @@
       "rules": {
         "indent": [
           "error",
-          4
+          2
         ],
         "semi": [
           "error",
@@ -20,7 +20,7 @@
         ],
         "quotes": [
           "error",
-          "backtick"
+          "single"
         ]
       }
     }

@@ -1,0 +1,37 @@
+// Разрешения экрана
+$mediaWidthLittleMobile: 320px;
+$mediaWidthMobile: 375px;
+$mediaWidthLittleTablet: 640px;
+$mediaWidthTablet: 768px;
+$widthNoTouch: 1025px;
+$mediaWidthLaptop: 1152px;
+$mediaWidthDesktop: 1256px;
+
+$burgerSpaceIn: 5px;
+
+// Цвета
+$primaryColor: #2a6cea;
+$primaryHoverColor: #397dff;
+$btnSecondaryBG: #eceff2;
+$bodyColor: #ffffff;
+$greySectionColor: #f6f8fa;
+$primaryTextColor: #191c1f;
+$secondaryTextColor: #5e646a;
+$lightTextColor: #ffffff;
+$grey: #83898f;
+$extralightGrey: #f6f8fa;
+$checkboxColor: #ccd8cd;
+
+// Шрифты
+$fontFamily:  "GraphikLCG", sans-serif;
+$largeBoldFont: 600 18px / 32px $fontFamily;
+$largeFont: 400 18px / 32px $fontFamily;
+$middleFont: 400 16px / 28px $fontFamily;
+$PreMiddleFont: 400 14px / 24px $fontFamily;
+$smallFont: 400 12px / 16px $fontFamily;
+
+$headline2Font: 600 40px / 56px $fontFamily;
+$headline3Font: 600 32px / 40px $fontFamily;
+$headline4Font: 600 24px / 32px $fontFamily;
+$headline5Font: 600 20px / 24px $fontFamily;
+$headline6Font: 600 16px / 24px $fontFamily;

@@ -1,0 +1,126 @@
+@import "../../local_modules/normalize.css/normalize";
+
+@import "../../local_modules/swiper/swiper-bundle.min";
+
+@import "../mixins/media";
+
+@import "../utils/variables";
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+*:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.focus-visible {
+    outline: deepskyblue;
+    box-shadow: 0 0 0 2px deepskyblue;
+}
+
+html {
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    background-color: $bodyColor;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    color: $primaryTextColor
+}
+
+p {
+    margin: 0;
+    color: $primaryTextColor
+}
+
+img {
+    max-width: 100%;
+}
+
+input {
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: $primaryTextColor;
+}
+
+.reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.reset-btn {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: $mediaWidthDesktop;
+
+    @include media-laptop {
+        padding: 0 40px;
+    }
+
+    @include media-tablet {
+        padding: 0 20px;
+    }
+
+    @include media-mobile  {
+        padding: 0 16px;
+    }
+}
+
+.btn {
+    padding: 20px 40px;
+    border-radius: 4px;
+    font: $headline5Font;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn--primary {
+    color: $lightTextColor;
+    background-color: $primaryColor;
+
+    @include media-notouch {
+        &:hover {
+            background-color: $primaryHoverColor;
+        }
+    }
+}
+
+.btn--secondary {
+    color: $primaryTextColor;
+    background-color: $btnSecondaryBG;
+
+    @include media-notouch {
+        &:hover {
+            background-color: $bodyColor;
+        }
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+

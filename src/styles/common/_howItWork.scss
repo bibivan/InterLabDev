@@ -1,0 +1,213 @@
+@import "../mixins/media";
+
+@import "../utils/variables";
+
+.howitwork {
+    padding: 80px 0;
+
+    @include media-tablet {
+        padding: 56px 0;
+    }
+
+    &__container--first {
+        margin-bottom: 80px;
+
+        @include media-tablet {
+            margin-bottom: 56px;
+        }
+
+        @include media-little-mobile  {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 65px;
+        font: $headline2Font;
+        text-align: center;
+
+        @include media-tablet {
+            margin-bottom: 42px;
+        }
+
+        @include media-mobile  {
+            font: $headline4Font;
+            margin-bottom: 26px;
+        }
+    }
+
+    &__cards {
+        display: flex;
+
+        @include media-laptop {
+            flex-wrap: wrap;
+        }
+
+
+        @include media-little-tablet {
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__card {
+        position: relative;
+        margin-right: 2.63%;
+        padding-top: 84px;
+        width: 23%;
+
+        @include media-laptop {
+            margin-right: 0;
+            margin-bottom: 32px;
+            width: 47.63%;
+        }
+
+        @include media-tablet {
+            padding: 0 0 0 72px;
+        }
+
+        @include media-little-tablet {
+            width: 100%;
+        }
+
+        &:nth-child(odd) {
+            @include media-laptop {
+                margin-right: 4%;
+            }
+        }
+
+        &:nth-last-child(2) {
+            @include media-laptop {
+                margin-bottom: 0;
+            }
+
+            @include media-little-tablet {
+                margin-bottom: 32px;
+            }
+
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            @include media-laptop {
+                margin-bottom: 0;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -4px;
+            height: 71px;
+            width: 70px;
+
+
+        }
+
+        &:first-child::before {
+            background-image: url("../img/waiting.svg") top left / auto 100%  no-repeat;
+        }
+
+        &:nth-child(2)::before {
+            background-image: url("../img/delivery-truck.svg") top left / auto 100%  no-repeat;
+        }
+
+        &:nth-child(3)::before {
+            background: url("../img/secure.svg") top left / auto 100%  no-repeat;
+        }
+
+        &:last-child::before {
+            background: url("../img/money-bags.svg") top left / auto 100%  no-repeat;
+        }
+
+        @include media-tablet {
+            &:first-child::before,
+            &:nth-child(2)::before,
+            &:nth-child(3)::before,
+            &:last-child::before {
+                background-position-y: 3px;
+                background-size: auto 80%;
+            }
+        }
+    }
+}
+
+.third-block {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media-little-tablet {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 48.68%;
+        height: 448px;
+        background: url("../img/worker.png") left / contain no-repeat,
+                    url("../img/truck.png") center / contain no-repeat;
+
+        @include media-tablet {
+            height: 265px;
+        }
+
+        @include media-little-tablet {
+            order: 1;
+            margin-bottom: 7px;
+            width: 100%;
+        }
+
+        @include media-mobile  {
+            margin-bottom: 0;
+        }
+
+        @include media-little-mobile  {
+            margin-bottom: 4px;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 2.63%;
+        width: 48.68%;
+
+        @include media-little-tablet {
+            order: 2;
+            width: 100%;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 18px;
+        font: $headline3Font;
+
+        @include media-tablet {
+            font: $headline5Font;
+        }
+
+        @include media-mobile  {
+            font: $headline5Font;
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        @include media-little-mobile  {
+            margin-bottom: 27px;
+        }
+    }
+
+    &__description {
+        font: $middleFont;
+        white-space: pre-line;
+
+        @include media-mobile  {
+            text-align: center;
+        }
+    }
+}

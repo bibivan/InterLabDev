@@ -19,7 +19,7 @@ function setMode(isProduction = false) {
   }
 }
 
-const dev = gulp.series(clean, copyDependencies, gulp.parallel(htmlInclude, fonts, script, svgSprite), fontsStyle, styles)
+const dev = gulp.series(clean, copyDependencies, gulp.parallel(htmlInclude, fonts, script, imageMinify), svgSprite, fontsStyle, styles)
 const build = gulp.series(clean, copyDependencies, gulp.parallel(htmlInclude, htmlMinify, fonts, script, imageMinify), svgSprite, fontsStyle, styles)
 
 module.exports.start = gulp.series(setMode(), dev, serve)

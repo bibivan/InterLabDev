@@ -4,6 +4,30 @@
 
 @import "common/global";
 
+// большие компоненты
+
 @import "common/header";
 
+@import "common/hero";
+
+@import "common/howItWork";
+
+@import "common/reviews";
+
+@import "common/faq";
+
+@import "common/survey";
+
+@import "common/feedback";
+
 @import "common/footer";
+
+// базовые компоненты
+
+@import "common/base/card";
+
+@import "common/base/feedbackForm";
+
+@import "common/base/customCheckbox";
+
+@import "common/base/burger";

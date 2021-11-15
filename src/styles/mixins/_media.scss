@@ -1,0 +1,50 @@
+@import "../utils/variables";
+
+@mixin media-little-mobile {
+
+    @media (max-width: $mediaWidthLittleMobile) {
+        @content;
+    }
+}
+
+@mixin media-mobile {
+
+    @media (max-width: $mediaWidthMobile) {
+        @content;
+    }
+}
+
+@mixin media-little-tablet {
+
+    @media (max-width: $mediaWidthLittleTablet) {
+        @content;
+    }
+}
+
+@mixin media-tablet {
+
+    @media (max-width: $mediaWidthTablet) {
+        @content;
+    }
+}
+
+@mixin media-laptop {
+
+    @media (max-width: $mediaWidthLaptop) {
+        @content;
+    }
+}
+
+@mixin media-desktop ($mediaWidthDesktop) {
+
+    @media (max-width: $mediaWidthDesktop) {
+        @content;
+    }
+}
+
+@mixin media-notouch {
+
+    @media (min-width: $widthNoTouch) {
+        @content;
+    }
+}

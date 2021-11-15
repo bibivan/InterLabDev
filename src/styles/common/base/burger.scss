@@ -1,0 +1,45 @@
+@import "../../mixins/media";
+
+@import "../../utils/variables";
+
+.burger {
+    position: relative;
+    display: none;
+    width: 22px;
+    height: 2px;
+
+    @include media-tablet {
+        display: inline-block;
+    }
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: $lightTextColor;
+        transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    }
+
+    &::before {
+        transform: translateY(-$burgerSpaceIn);
+    }
+
+    &::after {
+        transform: translateY($burgerSpaceIn);
+    }
+
+}
+
+.active::before {
+    transform: rotate(-45deg) translateY(0);
+    background-color:  $primaryTextColor;
+}
+
+.active::after {
+    transform: rotate(45deg) translateY(0);
+    background-color:  $primaryTextColor;
+}

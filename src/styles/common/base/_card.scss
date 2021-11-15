@@ -1,0 +1,17 @@
+@import "../../mixins/media";
+
+@import "../../utils/variables";
+
+.card {
+    display: flex;
+    flex-direction: column;
+
+    &__caption {
+        margin-bottom: 4px;
+        font: $headline6Font;
+    }
+
+    &__description {
+        font: $PreMiddleFont;
+    }
+}

@@ -1,0 +1,127 @@
+@import "../mixins/media";
+
+@import "../utils/variables";
+
+.reviews {
+    padding: 56px 0 31px;
+    background-color: $greySectionColor;
+
+    @include media-tablet {
+        padding: 33px 0 31px;
+    }
+
+    @include media-mobile  {
+        padding: 27px 0 24px;
+    }
+
+    @include media-little-mobile  {
+        padding: 27px 0 18px;
+    }
+
+    &__container {
+        position: relative;
+        padding: 0 96px 0 73px;
+
+        @include media-tablet {
+            padding: 0 21px;
+        }
+
+        @include media-mobile  {
+            padding: 0 16px;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 33px;
+        font: $headline2Font;
+        text-align: center;
+
+        @include media-tablet {
+            padding-right: 22px;
+        }
+
+        @include media-mobile  {
+            margin-bottom: 26px;
+            padding-right: 0;
+            font: $headline4Font;
+        }
+    }
+
+    &__swiper {
+        padding-bottom: 72px;
+
+        @include media-mobile  {
+            padding-bottom: 37px;
+        }
+    }
+
+    .reviews__slide {
+        padding: 22px;
+        min-height: 272px;
+        border-radius: 8px;
+        background-color: $bodyColor;
+        box-shadow: 0 5px 24px rgba(0, 0, 0, 0.1);
+
+        @include media-mobile  {
+            padding-bottom: 27px;
+            min-height: auto;
+        }
+
+        @include media-little-mobile  {
+            padding-bottom: 33px;
+        }
+    }
+
+    &__review {
+        display: block;
+        font: $PreMiddleFont;
+    }
+
+    &__prev, &__next {
+        top: 52%;
+        font-family: swiper-icons;
+        font-size: 32px;
+
+        @include media-tablet {
+            display: none;
+        }
+    }
+
+    &__next {
+        right: 35px;
+    }
+
+    &__pagination {
+        padding-left: 8px;
+
+        @include media-tablet {
+            padding-left: 0px;
+        }
+
+        .swiper-pagination-bullet {
+            --swiper-pagination-bullet-horizontal-gap: 8.5px;
+        }
+    }
+}
+
+.user {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+
+    &__avatar {
+        margin-right: 16px;
+    }
+
+    &__name {
+        display: block;
+        margin-bottom: 4px;
+        font: $headline6Font;
+    }
+
+    &__city {
+        display: block;
+        color: $secondaryTextColor;
+        font: $smallFont;
+    }
+}

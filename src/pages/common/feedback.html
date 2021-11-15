@@ -1,0 +1,24 @@
+<section class="feedback" id="feedback-section">
+  <div class="container feedback__container">
+    <h2 class="feedback__heading">Отправь форму</h2>
+    <form action="#" class="feedback__form form-feedback">
+      <div class="form-feedback__group-input">
+        <input class="form-feedback__input" type="text" name="name" data-validate-field="name">
+        <label class="form-feedback__placeholder">Имя</label>
+      </div>
+      <div class="form-feedback__group-input">
+        <input class="form-feedback__input form-feedback__input--tel" type="tel" name="tel" data-validate-field="tel">
+        <label class="form-feedback__placeholder">Телефон</label>
+      </div>
+      <div class="form-feedback__checkbox custom-checkbox">
+        <input class="custom-checkbox__input visually-hidden" id="feedback-confirm" type="checkbox" data-validate-field="confirm">
+        <label class="custom-checkbox__text" for="feedback-confirm">
+          Согласен, отказываюсь
+        </label>
+      </div>
+      <button class=" reset-btn btn btn--primary form-feedback__btn" type="submit">
+        Отправить
+      </button>
+    </form>
+  </div>
+</section>

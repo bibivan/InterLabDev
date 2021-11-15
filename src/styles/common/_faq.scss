@@ -1,0 +1,115 @@
+@import "../mixins/media";
+
+@import "../utils/variables";
+
+.faq {
+    padding: 80px 0 56px;
+
+    @include media-tablet {
+        padding: 56px 0;
+        //padding: 56px 0 87px;
+    }
+
+    &__heading {
+        margin-bottom: 41px;
+        font: $headline2Font;
+        text-align: center;
+
+        @include media-mobile  {
+            margin-bottom: 42px;
+            font: $headline4Font;
+        }
+
+        @include media-little-mobile  {
+            margin-bottom: 28px;
+        }
+    }
+
+    &__list {
+        padding: 0 104px;
+
+        @include media-tablet {
+            padding: 0;
+        }
+    }
+
+    &__question {
+        align-items: center;
+        padding-top: 24px;
+        border-top: 1px solid $btnSecondaryBG;
+
+        @include media-mobile  {
+            padding-top: 16px;
+        }
+    }
+
+    &__question:first-child {
+        @include media-mobile  {
+            border-top: 1px solid transparent;
+        }
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+        font: $largeBoldFont;
+        cursor: pointer;
+        transition: color 0.15s ease-in-out;
+
+        @include media-notouch {
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+
+        @include media-mobile  {
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+
+        span {
+            width: 92.8%;
+
+            @include media-little-tablet {
+                width: 87%;
+            }
+        }
+
+        svg {
+            display: block;
+            margin-left: 20px;
+            width: 24px;
+            height: 24px;
+            object-fit: cover;
+            fill: none;
+            transition: transform 0.3s ease-in-out;
+
+            @include media-little-tablet {
+                margin-top: 6px;
+            }
+        }
+    }
+
+    &__answer {
+        display: none;
+        padding-bottom: 24px;
+        width: 92.8%;
+        color: $secondaryTextColor;
+        font: $largeFont;
+
+        @include media-little-tablet {
+            width: 86%;
+            font: $middleFont;
+        }
+
+        @include media-mobile  {
+            padding-bottom: 16px;
+        }
+    }
+}
+
+.active svg {
+    transform: rotate(-45deg)
+}

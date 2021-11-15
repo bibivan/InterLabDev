@@ -1,0 +1,107 @@
+@import "../../mixins/media";
+
+@import "../../utils/variables";
+
+.form-feedback {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 800px;
+
+    @include media-little-tablet {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    &__group-input {
+        position: relative;
+        margin-bottom: 30px;
+        width: 48%;
+        border-radius: 4px;
+
+        @include media-little-tablet {
+            width: 100%;
+        }
+
+        @include media-mobile  {
+            margin-bottom: 20px;
+        }
+
+        &:first-child {
+            margin-right: 4%;
+
+            @include media-little-tablet {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__placeholder {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        font: $largeFont;
+        color: $secondaryTextColor;
+        pointer-events: none;
+        transition: top 0.15s ease-in-out, font 0.15s ease-in-out, color 0.15s ease-in-out;
+
+        &--dirty {
+            top: 8px;
+            font: $PreMiddleFont;
+            color: $grey;
+        }
+    }
+
+    &__input {
+        //position: relative;
+        padding: 26px 14px 2px;
+        width: 100%;
+        border: 2px solid $extralightGrey;
+        border-radius: inherit;
+        color: $primaryTextColor;
+        font: $largeFont;
+        background-color: $extralightGrey;
+
+        &:focus {
+            background-color: transparent;
+        }
+    }
+
+    .js-validate-error-label {
+        position: relative;
+        margin-top: 5px;
+        font: $smallFont;
+    }
+
+    .js-validate-error-field {
+        border: 2px solid red !important;
+        color: $primaryTextColor !important;
+        caret-color: black;
+    }
+
+    .custom-checkbox {
+        margin-right: 4%;
+        width: 48%;
+
+        @include media-little-tablet {
+            margin: 0 0 30px 0;
+            width: 100%;
+        }
+
+        @include media-mobile  {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__btn {
+        width: 48%;
+        max-width: 384px;
+
+        @include media-little-tablet {
+            align-self: center;
+            width: 100%;
+        }
+    }
+
+}
